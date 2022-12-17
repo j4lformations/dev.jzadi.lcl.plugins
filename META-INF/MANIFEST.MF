@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Plugins
+Bundle-SymbolicName: dev.jzadi.lcl.plugins;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: dev.jzadi.lcl.plugins.Activator
+Bundle-Vendor: Joachim
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Automatic-Module-Name: dev.jzadi.lcl.plugins
+Bundle-ActivationPolicy: lazy
