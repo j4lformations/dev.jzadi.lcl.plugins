@@ -2,7 +2,6 @@ package dev.jzadi.lcl.plugins.models;
 
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -26,7 +25,8 @@ public class Project {
 			@JsonProperty("id") Integer id, 
 			@JsonProperty("name") String name, 
 			@JsonProperty("default_branch") String defaultBranch,
-			@JsonProperty("tags") List<String> tagList, @JsonProperty("url_repo") String httpUrlToRepo,
+			@JsonProperty("tags") List<String> tagList, 
+			@JsonProperty("url_repo") String httpUrlToRepo,
 			@JsonProperty("web_url")  String webUrl
 	) {
 		this.id = id;
