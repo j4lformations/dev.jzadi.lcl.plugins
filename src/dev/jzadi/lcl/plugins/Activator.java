@@ -12,7 +12,7 @@ import org.osgi.framework.BundleContext;
  */
 public class Activator extends AbstractUIPlugin {
 
-	public static final String PLUGIN_ID = "dev.jzadi.lcl.plugins"; //$NON-NLS-1$
+	public static final String PLUGIN_ID = "dev.jzadi.lcl.plugins";
 
 	private static Activator plugin;
 
@@ -34,5 +34,4 @@ public class Activator extends AbstractUIPlugin {
 	public static Activator getDefault() {
 		return plugin;
 	}
-
 }

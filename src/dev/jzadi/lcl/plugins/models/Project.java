@@ -17,23 +17,24 @@ public class Project {
 
 	private Integer id;
 	private String name;
-	private String default_branch;
-	private List<String> tag_list;
-	private String http_url_to_repo;
-	private String web_url;
+	private String defaultBranch;
+	private List<String> tagList;
+	private String httpUrlToRepo;
+	private String webUrl;
 
-	public Project() {
-	}
-
-	@JsonCreator
-	public Project(Integer id, String name, String default_branch, @JsonProperty("tags") List<String> tag_list,
-			String http_url_to_repo, String web_url) {
+	public Project(
+			@JsonProperty("id") Integer id, 
+			@JsonProperty("name") String name, 
+			@JsonProperty("default_branch") String defaultBranch,
+			@JsonProperty("tags") List<String> tagList, @JsonProperty("url_repo") String httpUrlToRepo,
+			@JsonProperty("web_url")  String webUrl
+	) {
 		this.id = id;
 		this.name = name;
-		this.default_branch = default_branch;
-		this.tag_list = tag_list;
-		this.http_url_to_repo = http_url_to_repo;
-		this.web_url = web_url;
+		this.defaultBranch = defaultBranch;
+		this.tagList = tagList;
+		this.httpUrlToRepo = httpUrlToRepo;
+		this.webUrl = webUrl;
 	}
 
 	public Integer getId() {
@@ -52,41 +53,41 @@ public class Project {
 		this.name = name;
 	}
 
-	public String getDefault_branch() {
-		return default_branch;
+	public String getDefaultBranch() {
+		return defaultBranch;
 	}
 
-	public void setDefault_branch(String default_branch) {
-		this.default_branch = default_branch;
+	public void setDefaultBranch(String defaultBranch) {
+		this.defaultBranch = defaultBranch;
 	}
 
-	public List<String> getTag_list() {
-		return tag_list;
+	public List<String> getTagList() {
+		return tagList;
 	}
 
-	public void setTag_list(List<String> tag_list) {
-		this.tag_list = tag_list;
+	public void setTagList(List<String> tagList) {
+		this.tagList = tagList;
 	}
 
-	public String getHttp_url_to_repo() {
-		return http_url_to_repo;
+	public String getHttpUrlToRepo() {
+		return httpUrlToRepo;
 	}
 
-	public void setHttp_url_to_repo(String http_url_to_repo) {
-		this.http_url_to_repo = http_url_to_repo;
+	public void setHttpUrlToRepo(String httpUrlToRepo) {
+		this.httpUrlToRepo = httpUrlToRepo;
 	}
 
-	public String getWeb_url() {
-		return web_url;
+	public String getWebUrl() {
+		return webUrl;
 	}
 
-	public void setWeb_url(String web_url) {
-		this.web_url = web_url;
+	public void setWebUrl(String webUrl) {
+		this.webUrl = webUrl;
 	}
 
 	@Override
 	public String toString() {
-		return "[id=" + id + ", name=" + name + ", default_branch=" + default_branch + ", tag_list=" + tag_list
-				+ ", http_url_to_repo=" + http_url_to_repo + ", web_url=" + web_url + "]";
+		return "Project [id=" + id + ", name=" + name + ", defaultBranch=" + defaultBranch + ", tagList=" + tagList
+				+ ", httpUrlToRepo=" + httpUrlToRepo + ", webUrl=" + webUrl + "]";
 	}
 }
