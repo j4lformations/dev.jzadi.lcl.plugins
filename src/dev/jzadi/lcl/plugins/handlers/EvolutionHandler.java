@@ -7,22 +7,19 @@ import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.jgit.api.errors.GitAPIException;
 
-import dev.jzadi.lcl.plugins.models.services.IGitService;
-import dev.jzadi.lcl.plugins.models.services.impl.GitService;
+import dev.jzadi.lcl.plugins.Activator;
 
 public class EvolutionHandler extends AbstractHandler {
 
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
-		IGitService service = new GitService();		
+		Activator activator = Activator.getDefault();
 		try {
-			service.cloneDepot("java");
-			service.createNewBranch("develop", "java");
-//			System.out.println(Platform.getInstanceLocation().getURL().toString());
-//			System.out.println(new File(System.getProperty("eclipse.launcher")).getParent());
-//			System.out.println(service.getWorkSpace());
+			activator.getService().cloneDepot("java");
+			activator.getService().createNewBranch("develop", "java");
 		} catch (IOException | GitAPIException e) {
-			System.err.println(e.getMessage());
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		return null;
 	}

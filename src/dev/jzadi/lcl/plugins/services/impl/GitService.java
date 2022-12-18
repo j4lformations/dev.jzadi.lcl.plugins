@@ -1,4 +1,4 @@
-package dev.jzadi.lcl.plugins.models.services.impl;
+package dev.jzadi.lcl.plugins.services.impl;
 
 import java.io.File;
 import java.io.IOException;
@@ -28,7 +28,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import dev.jzadi.lcl.plugins.models.Project;
-import dev.jzadi.lcl.plugins.models.services.IGitService;
+import dev.jzadi.lcl.plugins.services.IGitService;
 
 public class GitService implements IGitService {
 
@@ -79,7 +79,7 @@ public class GitService implements IGitService {
 
 	@Override
 	public String getWorkSpace() {
-		return String.format("%s%sgitprojects%s", System.getProperty("user.home"), File.separator, File.separator);
+		return System.getProperty("osgi.instance.area.default").substring(6);
 	}
 
 	@Override

@@ -3,8 +3,8 @@ package dev.jzadi.lcl.plugins;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 
-import dev.jzadi.lcl.plugins.models.services.IGitService;
-import dev.jzadi.lcl.plugins.models.services.impl.GitService;
+import dev.jzadi.lcl.plugins.services.IGitService;
+import dev.jzadi.lcl.plugins.services.impl.GitService;
 
 /**
  * Classe permettant de controller le cycle de vie du plugin

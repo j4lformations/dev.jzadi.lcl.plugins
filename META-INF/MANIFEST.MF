@@ -6,9 +6,9 @@ Bundle-Version: 1.0.0.qualifier
 Export-Package: dev.jzadi.lcl.plugins,
  dev.jzadi.lcl.plugins.handlers,
  dev.jzadi.lcl.plugins.models,
- dev.jzadi.lcl.plugins.models.services,
- dev.jzadi.lcl.plugins.models.services.impl,
- swing2swt.layout
+ dev.jzadi.lcl.plugins.services,
+ dev.jzadi.lcl.plugins.services.impl,
+ dev.jzadi.lcl.plugins.resources
 Bundle-Activator: dev.jzadi.lcl.plugins.Activator
 Bundle-Vendor: Joachim
 Require-Bundle: org.eclipse.ui,

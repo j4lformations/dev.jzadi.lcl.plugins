@@ -1,4 +1,4 @@
-package dev.jzadi.lcl.plugins.models.services;
+package dev.jzadi.lcl.plugins.services;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
