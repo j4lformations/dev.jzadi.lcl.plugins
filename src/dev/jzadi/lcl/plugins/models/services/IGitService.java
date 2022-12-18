@@ -18,7 +18,7 @@ public interface IGitService {
 	 * Permet de recuper la liste de tous ,les projets du referentiel Distant
 	 * 
 	 * @return La liste de tous les projets
-	 * @throws IOException 
+	 * @throws IOException
 	 */
 	List<Project> allProjects() throws IOException;
 
@@ -26,7 +26,22 @@ public interface IGitService {
 	 * Permet de recuperer la liste de tous les noms de projets
 	 * 
 	 * @return Le liste de nom de tous les projets
-	 * @throws IOException 
+	 * @throws IOException
 	 */
 	List<String> allProjectsNames() throws IOException;
+
+	/**
+	 * Permet de recuperer la liste des branches d'un projet SCM
+	 * 
+	 * @param project
+	 * @return
+	 * @throws IOException
+	 */
+	List<String> allBranchsNames(String project) throws IOException;
+
+	/**
+	 * Permet de construire le worskpace du user
+	 * @return
+	 */
+	String getWorkSpace();
 }

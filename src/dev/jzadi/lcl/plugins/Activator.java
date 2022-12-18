@@ -18,10 +18,10 @@ public class Activator extends AbstractUIPlugin {
 	public static final String PLUGIN_ID = "dev.jzadi.lcl.plugins";
 
 	private static Activator plugin;
-	
+
 	private IGitService service;
 
-	public Activator() {
+	public Activator() {		
 	}
 
 	@Override
@@ -36,6 +36,10 @@ public class Activator extends AbstractUIPlugin {
 		plugin = null;
 		service = null;
 		super.stop(context);
+	}
+
+	public IGitService getService() {
+		return service;
 	}
 
 	public static Activator getDefault() {

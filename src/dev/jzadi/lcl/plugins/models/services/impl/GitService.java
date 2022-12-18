@@ -1,5 +1,6 @@
 package dev.jzadi.lcl.plugins.models.services.impl;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -46,8 +47,20 @@ public class GitService implements IGitService {
 
 	@Override
 	public List<String> allProjectsNames() throws IOException {
-		List<String> names = allProjects().stream().map(p->p.getName()).map(p->p.toLowerCase()).collect(Collectors.toList());
+		List<String> names = allProjects().stream().map(p -> p.getName()).map(p -> p.toLowerCase())
+				.collect(Collectors.toList());
 		Collections.sort(names);
 		return names;
+	}
+
+	@Override
+	public List<String> allBranchsNames(String project) throws IOException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getWorkSpace() {
+		return String.format("%s%sgitprojects%s", System.getProperty("user.home"), File.separator, File.separator);
 	}
 }
