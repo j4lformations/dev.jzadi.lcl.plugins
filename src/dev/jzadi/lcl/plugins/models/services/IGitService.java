@@ -1,7 +1,10 @@
 package dev.jzadi.lcl.plugins.models.services;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
+
+import org.eclipse.jgit.api.errors.GitAPIException;
 
 import dev.jzadi.lcl.plugins.models.Project;
 
@@ -41,7 +44,29 @@ public interface IGitService {
 
 	/**
 	 * Permet de construire le worskpace du user
+	 * 
 	 * @return
+	 * @throws IOException
+	 * @throws FileNotFoundException
 	 */
-	String getWorkSpace();
+	String getWorkSpace() throws FileNotFoundException, IOException;
+
+	/**
+	 * Permet de cloner un depot SCM
+	 * 
+	 * @param depot
+	 * @throws IOException
+	 * @throws GitAPIException
+	 */
+	void cloneDepot(String depot) throws IOException, GitAPIException;
+
+	/**
+	 * Permet de creer une nouvelle branch sur le depot SCM
+	 * 
+	 * @param branch
+	 * @param depot
+	 * @throws IOException
+	 * @throws GitAPIException
+	 */
+	void createNewBranch(String branch, String depot) throws IOException, GitAPIException;
 }
