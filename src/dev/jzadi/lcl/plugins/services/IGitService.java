@@ -18,7 +18,7 @@ import dev.jzadi.lcl.plugins.models.Project;
 public interface IGitService {
 
 	/**
-	 * Permet de recuper la liste de tous ,les projets du referentiel Distant
+	 * Permet de recuperer la liste de tous ,les projets du referentiel Distant
 	 * 
 	 * @return La liste de tous les projets
 	 * @throws IOException

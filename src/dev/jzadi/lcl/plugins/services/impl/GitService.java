@@ -98,6 +98,7 @@ public class GitService implements IGitService {
 			System.out.println("\nDEBUT DE CLONAGE %s");
 			Git.cloneRepository().setURI(URI_DEPOT).setDirectory(appPath).setCredentialsProvider(PROVIDER)
 					.setProgressMonitor(MONITOR).call();
+			
 			System.out.println("CLONAGE OK");
 		} catch (Exception e) {
 			System.out.println("\nCLONAGE NOK : " + e.getMessage());
