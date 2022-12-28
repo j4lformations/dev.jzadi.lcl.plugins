@@ -13,12 +13,25 @@
             name="Evolution"
             id="dev.jzadi.lcl.plugins.commands.evolutlion">
       </command>
+      <category
+            id="dev.jzadi.lcl.plugins.commands.joindre"
+            name="Joindre">
+      </category>
+      <command
+            categoryId="dev.jzadi.lcl.plugins.commands.joindre"
+            id="dev.jzadi.lcl.plugins.commands.joindre"
+            name="JoindreEvolution">
+      </command>
    </extension>
    <extension
          point="org.eclipse.ui.handlers">
       <handler
             class="dev.jzadi.lcl.plugins.handlers.EvolutionHandler"
             commandId="dev.jzadi.lcl.plugins.commands.evolutlion">
+      </handler>
+      <handler
+            class="dev.jzadi.lcl.plugins.handlers.JoindreEvolutionHandler"
+            commandId="dev.jzadi.lcl.plugins.commands.joindre">
       </handler>
    </extension>
    <extension
@@ -29,6 +42,12 @@
             contextId="org.eclipse.ui.contexts.window"
             sequence="M1+6">
       </key>
+      <key
+            commandId="dev.jzadi.lcl.plugins.commands.joindre"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+6">
+      </key>
    </extension>
    <extension
          point="org.eclipse.ui.menus">
@@ -37,10 +56,21 @@
          <toolbar
                id="dev.jzadi.lcl.plugins.toolbars.evolution">
             <command
-                  id="dev.jzadi.lcl.plugins.toolbars.evolution"
                   commandId="dev.jzadi.lcl.plugins.commands.evolutlion"
                   icon="icons/sample.png"
+                  id="dev.jzadi.lcl.plugins.toolbars.evolution"
+                  style="push"
                   tooltip="Créer une Evolution">
+            </command>
+         </toolbar>
+         <toolbar
+               id="dev.jzadi.lcl.plugins.toolbars.joindre">
+            <command
+                  commandId="dev.jzadi.lcl.plugins.commands.joindre"
+                  icon="icons/sample.png"
+                  id="dev.jzadi.lcl.plugins.toolbars.joindre"
+                  style="push"
+                  tooltip="Joindre une évolution">
             </command>
          </toolbar>
       </menuContribution>
